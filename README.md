@@ -28,7 +28,7 @@ jl_frame steps the context along by a single frame. Use this function at the beg
 jl_clear will clear the screen to a solid color. Pass the rgba value to clear to. If the color is transparent, then the previous contents will still be visible behind the clear.
 
 # void jl_square( float x, float y, float dim, jl_Color col):
-jl_square draws a square at location x, y, with a length of size dim, and is rendered at the color col. A square is drawn centered from the x/y position rather than from the upper-left.
+jl_square draws a square at location x, y, with a length of size dim, and is rendered using the color col. A square is drawn centered from the x/y position rather than from the upper-left.
 
 # jl_rand(lo,hi)
 jl_rand is a macro that supports random number generation for both floats and integer types. The random value will contain any possible number between lo and hi.
