@@ -32,3 +32,11 @@ jl_square draws a square at location x, y, with a length of size dim, and is ren
 
 # jl_rand(lo,hi)
 jl_rand is a macro that supports random number generation for both floats and integer types. The random value will contain any possible number between lo and hi.
+
+# Coming Soon
+Abstractions over common texture-loading operations.
+Abstractions over sound-loading and sound-playing operations.
+OpenGL context creation support with a single function call.
+Abstractions over network.
+An interface for the go programming language.
+An interface for the C++ programming language with destructors.
