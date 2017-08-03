@@ -33,6 +33,9 @@ jl_square draws a square at location x, y, with a length of size dim, and is ren
 # jl_rand(lo,hi)
 jl_rand is a macro that supports random number generation for both floats and integer types. The random value will contain any possible number between lo and hi.
 
+# jl_string( char*str, float x, float y, float w, float h, jl_Color col )
+jl_string will draw a string that fits inside the recatangle passed to it. The background of the texture will be transparent, and the color of the text will be rendered with color col.
+
 # Coming Soon
 Abstractions over common texture-loading operations.
 Abstractions over sound-loading and sound-playing operations.
