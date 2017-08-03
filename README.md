@@ -1,5 +1,7 @@
 # jl
-Create cross platform graphics and sound and eliminate common boilerplate code.
+Create cross platform graphics and sound and eliminate common boilerplate code that using libraries like SDL2 entails. This library statically depends on different lirbaries, depending on the platform deployed to.
+For Windows, Mac OSX, and *nix, iOS, and Android, SDL2 is a dependency.
+For the web with emscripten, emscripten and SDL2 are dependencies.
 
 # How the coordinate system works:
 
