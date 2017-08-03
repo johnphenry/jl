@@ -1,5 +1,5 @@
 # JL
-Create cross platform graphics and sound and eliminate common boilerplate code that using libraries like SDL2 entails. This library statically depends on different lirbaries, depending on the platform deployed to. Static dependencies are chosen to make the applications easily deployable to other machines.
+Create cross platform graphics and sound and eliminate common boilerplate code and platform differences that using libraries like SDL2 and OpenGL entails. This library statically depends on different lirbaries, depending on the platform deployed to. Static dependencies are chosen to make the applications easily deployable to other machines.
 For Windows, Mac OSX, and *nix, iOS, and Android, SDL2 is a dependency.
 For the web with emscripten, emscripten and SDL2 are dependencies.
 
