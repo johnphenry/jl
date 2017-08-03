@@ -112,61 +112,7 @@ void jl_string( char*str, float x, float y, float w, float h, jl_Color c ){
 	SDL_RenderCopy( ren, tex, NULL, &r );
 	SDL_DestroyTexture(tex);
 }
-/*TOADD:
 
-A timer. I definately need software timers to use.
-These timers can be checked against and can cause things to happen.
-Of the form:
-
-Finally, I think this project as a whole needs to be re-thought and redone.
-
-It needs to:
-1. Be designed for emscripten support.
-2. Use source control
-3. Link to all of its dependencies statically.
-4. Be able to be easily installed on the system as a static library.
-
-jl_Timer fall_time = interval( JL_SECOND );
-then later:
-if( fall_time ){
-	block_fall, ect.
-}
-
-
-
-Modify the string function so that the string "nicely fits" inside the rectangle.
-The text will basically scale as time goes on.
-
-However, when it comes to something like draw_int, which will primarily be used for scores,
-I believe that one should always assume a certain number of characters, namely the
-max number of characters required to rendr an unsigned int string.
-
-It would also be nice if I could tile up the screen and have my strings drawn in a set of tiles.
-
-Other tricks would be: outlining text. If I were to render two texts of differnet colors, I could outline it.
-
-jl_int_string
-Add a better way for graphics to scale into the central square through code reuse.
-I'm thinking that a JL_rect could potentially contain a texture, but if the pointer
-is set to NULL then a solid color is simply drawn. This ultimately means less functions.
-
-I need a way to describe algorithms such that they can continue to display in all the
-out-of-bounds areas. There needs to be some indicator of: beginning of screen, ect.
-
-Otherwise, how can I take full advantage of tile space in a platform game?
-
-I can also build libraries on top of this one.
-
-But even like, let's say I was making that sine demo. I'd want to take full advantage
-of the potential screen space but still guarantee that the small square will contain every letter.
-
-For instance I can easily build a platformer engine on top of this that I can then use for
-multiple games.
-
-Finally, I want to make a build tool. Something that will package a game for me correctly depending on
-the platform.
-Makes a mac application bundle, ect.
-*/
 int JL_RAND(void){
 	return rand();
 }
