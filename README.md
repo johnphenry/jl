@@ -37,6 +37,45 @@ jl_rand is a macro that supports random number generation for both floats and in
 Abstractions over common texture-loading operations.
 Abstractions over sound-loading and sound-playing operations.
 OpenGL context creation support with a single function call.
-Abstractions over network.
-An interface for the go programming language.
-An interface for the C++ programming language with destructors.
+Abstractions over networking.
+
+# JL_OpenGL Plans
+A header named: "JL_OpenGL" will be created soon, which only includes the common OpenGL functionality between WebGL, OpenGL ES, and Desktop OpenGL. In this way it will be possible to make OpenGL programs in a true cross-platform way, where the same code will run on all platforms. It has always been disappointing to me that OpenGL is different for certain platforms, it pretty much defeats the purpose of OpenGL being supposedly "cross platform". Plans include functions that load shaders cross-platform, and functions for quickly creating opengl textures and loading meshes.
+
+# Details about textures and the new DIV:
+
+draing a texture is as simple as:
+
+draw_texture
+
+Now, I want multiple modes of drawing a texture:
+
+standard:
+Simply gets placed at x,y. Transformations applied to it like scale,
+rotation, and the like can also apply here.
+
+when it comes to drawing a texture into another texture:
+
+
+jl_init()
+jl_buffer( 320, 240 )
+draw_buffer_best_fit
+
+best fit is good when you have a certain size of screen buffer that you want to ensure fits into the correct area.
+
+
+Alright, so like HTML, there is a notion of a DIV. A DIV is a rectangular
+location that specifies a region for texture drawing.
+
+By using a DIV, you do not need to specify anything else, not even a positon
+
+To draw a texture into a div, you call:
+
+Both of these modes completely ignore transformations.
+Only transformations to the div itself are important here.
+div.best_fit(texture)
+or
+div.stretch(texture)
+
+Both of these modes serve different purposes.
+It would be great if divs could automatically divide space up themselves.
